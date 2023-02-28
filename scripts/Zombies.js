@@ -34,6 +34,10 @@ class Zombies {
                 }
             }
         }
+        else
+        {
+            reset();
+        }
     }
 }
 setInterval(() => {

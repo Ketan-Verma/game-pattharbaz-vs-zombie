@@ -9,6 +9,8 @@ function preload(){
   walk2=loadImage("./assets/png/walk2.png")
   walk3=loadImage("./assets/png/walk3.png")
   rocky = loadImage("./assets/png/rockybhai.png")
+  soundFormats('mp3', 'ogg');
+  mySound = loadSound('./assets/png/bgm.mp3');
 }
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -18,13 +20,18 @@ function setup() {
         
       }
     }
-    // zombies.push(new Zombies(width/2-(width/25)- 2*(width/6),height,1))
-    // zombies.push(new Zombies(width/2-(width/25)- 2*(width/6),height,2))
     zombies.push(new Zombies(width/2-(width/25)- 2*(width/6),height,3))
-    // zombies.push(new Zombies(width/2-(width/25)- 2*(width/6),height,4))
-    // zombies.push(new Zombies(width/2-(width/25)- 2*(width/6),height,5))
+    plants[2].empty=false;
+    mySound.play();
   }
-  
+  function reset(){
+       plants = [];
+   zombies = [];
+   bullets = [];
+   numOfZombies = [0,0,0,0,0]
+   score = 0;
+    setup()
+  }
   function draw() {
     background(img);
     

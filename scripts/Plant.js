@@ -47,9 +47,7 @@ setInterval(() => {
     for (let i = 0; i < plants.length; i++) {
         const plant = plants[i];        
         if(!plant.empty){
-            // console.log(bullets.length);
             if(numOfZombies[plant.row-1]==0)continue;
-            console.log(numOfZombies)
             bullets.push(new Bullet(plant.x,plant.y+10,plant.row));
         }
 
