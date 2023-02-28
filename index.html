@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+        *{
+            margin: auto;
+            padding: auto;
+        }
+        body{
+             overflow: hidden;
+            /*background-image: url("./assets/Background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; */
+        }
+        #score{
+            padding: 0.05em 0.25em;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            font-family: sans-serif;
+            font-size: 30px;
+            background-color: aliceblue;
+            transform: rotate(90deg);
+        }
+    </style>
+    <title>PvsZ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+
+    <script src="./scripts/Plant.js"></script>
+    <script src="./scripts/Zombies.js"></script>
+    <script src="./scripts/Bullets.js"></script>
+</head>
+<body>
+    <div id="score">0</div>
+    <script src="./app.js"></script>
+</body>
+</html>
